@@ -6,7 +6,11 @@ class Experience extends Component {
   }
 
   render() {
-    return <div className="input-group form-experience"></div>;
+    return (
+      <div className="input-group form-experience">
+        <h2 className="group-heading">Experience</h2>
+      </div>
+    );
   }
 }
 

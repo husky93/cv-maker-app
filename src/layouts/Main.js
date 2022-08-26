@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Display from './Display';
 import Form from './Form';
 
-class App extends Component {
+class Main extends Component {
   constructor() {
     super();
     this.state = {
@@ -27,20 +27,19 @@ class App extends Component {
         [key]: value,
       },
     });
-    console.log(this.state);
   }
 
   render() {
     return (
-      <div className="app">
+      <main className="main">
         <Form
           info={this.state.form}
           handleInputChange={this.handleInputChange}
         />
         <Display />
-      </div>
+      </main>
     );
   }
 }
 
-export default App;
+export default Main;

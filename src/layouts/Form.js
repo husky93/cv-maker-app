@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Education from './Education';
-import Experience from './Experience';
-import General from './General';
-import Skills from './Skills';
+import Education from '../sections/Education';
+import Experience from '../sections/Experience';
+import General from '../sections/General';
+import Skills from '../sections/Skills';
 
 class Form extends Component {
   constructor(props) {
