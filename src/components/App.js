@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Display from './components/Display';
-import Form from './components/Form';
+import Display from './Display';
+import Form from './Form';
 
 class App extends Component {
   constructor() {
