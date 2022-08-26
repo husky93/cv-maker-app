@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Education from './Education';
 import Experience from './Experience';
 import General from './General';
+import Skills from './Skills';
 
 class Form extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class Form extends Component {
         <General />
         <Experience />
         <Education />
+        <Skills />
       </form>
     );
   }

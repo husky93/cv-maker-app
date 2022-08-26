@@ -1,4 +1,3 @@
-import './App.css';
 import React, { Component } from 'react';
 import Display from './components/Display';
 import Form from './components/Form';
