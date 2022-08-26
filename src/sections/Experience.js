@@ -22,7 +22,7 @@ class Experience extends Component {
             id={index}
             info={item}
             handleInputChange={handleInputChange}
-            handleExperienceDelete={handleExperienceDelete}
+            handleFormDelete={handleExperienceDelete}
             key={`expform-${index}`}
           />
         ))}
@@ -30,7 +30,7 @@ class Experience extends Component {
           <Button
             text="Add"
             handleClick={handleExperienceAdd}
-            className="btn--primary"
+            className="btn--primary exp-add"
           />
         </div>
       </div>

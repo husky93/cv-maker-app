@@ -37,40 +37,59 @@ class Main extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleExperienceChange = this.handleExperienceChange.bind(this);
-    this.handleExperienceAdd = this.handleExperienceAdd.bind(this);
-    this.handleExperienceDelete = this.handleExperienceDelete.bind(this);
+    this.handleAddClick = this.handleAddClick.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
 
-  handleExperienceAdd(event) {
+  handleAddClick(event) {
     event.preventDefault();
     const experience = [...this.state.form.experience];
-
-    experience.push({
-      company: '',
-      title: '',
-      date: '',
-      location: '',
-      description: '',
-    });
+    const education = [...this.state.form.education];
+    if (event.target.classList.contains('exp-add')) {
+      experience.push({
+        company: '',
+        title: '',
+        date: '',
+        location: '',
+        description: '',
+      });
+    }
+    if (event.target.classList.contains('edu-add')) {
+      education.push({
+        school: '',
+        degree: '',
+        date: '',
+        location: '',
+        description: '',
+      });
+    }
 
     this.setState({
       form: {
         ...this.state.form,
         experience,
+        education,
       },
     });
   }
 
-  handleExperienceDelete(event) {
+  handleDeleteClick(event) {
     event.preventDefault();
     const id = event.target.parentElement.dataset.id;
     const experience = [...this.state.form.experience];
-    experience.splice(id, 1);
+    const education = [...this.state.form.education];
+    if (event.target.classList.contains('exp-delete')) {
+      experience.splice(id, 1);
+    }
+    if (event.target.classList.contains('edu-delete')) {
+      education.splice(id, 1);
+    }
 
     this.setState({
       form: {
         ...this.state.form,
         experience,
+        education,
       },
     });
   }
@@ -110,8 +129,8 @@ class Main extends Component {
           info={this.state.form}
           handleInputChange={this.handleInputChange}
           handleExperienceChange={this.handleExperienceChange}
-          handleExperienceAdd={this.handleExperienceAdd}
-          handleExperienceDelete={this.handleExperienceDelete}
+          handleAddClick={this.handleAddClick}
+          handleDeleteClick={this.handleDeleteClick}
         />
         <Display />
       </main>

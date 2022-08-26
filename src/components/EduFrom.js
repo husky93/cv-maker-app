@@ -54,7 +54,7 @@ class EduForm extends Component {
         <Button
           text="Delete"
           handleClick={handleFormDelete}
-          className="btn--danger"
+          className="btn--danger edu-delete"
         />
       </div>
     );

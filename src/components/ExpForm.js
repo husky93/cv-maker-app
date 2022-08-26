@@ -9,7 +9,7 @@ class ExpForm extends Component {
   }
 
   render() {
-    const { info, id, handleInputChange, handleExperienceDelete } = this.props;
+    const { info, id, handleInputChange, handleFormDelete } = this.props;
     return (
       <div className="input-group form-experience" data-id={id}>
         <Input
@@ -53,8 +53,8 @@ class ExpForm extends Component {
         />
         <Button
           text="Delete"
-          handleClick={handleExperienceDelete}
-          className="btn--danger"
+          handleClick={handleFormDelete}
+          className="btn--danger exp-delete"
         />
       </div>
     );
