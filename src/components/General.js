@@ -7,6 +7,7 @@ class General extends Component {
   }
 
   render() {
+    const { info, handleInputChange } = this.props;
     return (
       <div className="input-group form-general">
         <h2 className="group-heading">General Information</h2>
@@ -15,48 +16,48 @@ class General extends Component {
           name="name"
           className="input--name"
           placeholder="Name"
-          value="placeholder value"
-          handleInputChange={() => {}}
+          value={info.name}
+          handleInputChange={handleInputChange}
         />
         <Input
           type="text"
           name="title"
           className="input--title"
           placeholder="Title"
-          value="placeholder value"
-          handleInputChange={() => {}}
+          value={info.title}
+          handleInputChange={handleInputChange}
         />
         <Input
           type="text"
           name="location"
           className="input--location"
           placeholder="Location"
-          value="placeholder value"
-          handleInputChange={() => {}}
+          value={info.location}
+          handleInputChange={handleInputChange}
         />
         <Input
           type="tel"
           name="phone"
           className="input--phone"
           placeholder="Phone number"
-          value="placeholder value"
-          handleInputChange={() => {}}
+          value={info.phone}
+          handleInputChange={handleInputChange}
         />
         <Input
           type="email"
           name="email"
           className="input--email"
           placeholder="E-mail address"
-          value="placeholder value"
-          handleInputChange={() => {}}
+          value={info.email}
+          handleInputChange={handleInputChange}
         />
         <Input
           type="url"
           name="website"
           className="input--website"
           placeholder="https://example.com"
-          value="placeholder value"
-          handleInputChange={() => {}}
+          value={info.website}
+          handleInputChange={handleInputChange}
         />
       </div>
     );

@@ -10,12 +10,13 @@ class Form extends Component {
   }
 
   render() {
+    const { info, handleInputChange } = this.props;
     return (
       <form className="form" autoComplete="off">
-        <General />
-        <Experience />
-        <Education />
-        <Skills />
+        <General info={info} handleInputChange={handleInputChange} />
+        <Experience info={info} handleInputChange={handleInputChange} />
+        <Education info={info} handleInputChange={handleInputChange} />
+        <Skills info={info} handleInputChange={handleInputChange} />
       </form>
     );
   }
