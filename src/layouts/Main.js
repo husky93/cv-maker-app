@@ -23,6 +23,16 @@ class Main extends Component {
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
           },
         ],
+        education: [
+          {
+            school: 'Example University',
+            degree: 'B.S. Web development',
+            date: 'July 2011 - November 2014',
+            location: 'Kraków, PL',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+          },
+        ],
       },
     };
     this.handleInputChange = this.handleInputChange.bind(this);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from './Button';
 import Input from './Input';
+import Textarea from './Textarea';
 
 class EduForm extends Component {
   constructor(props) {
@@ -41,6 +42,13 @@ class EduForm extends Component {
           className="input--location"
           placeholder="Location"
           value={info.location}
+          handleInputChange={handleInputChange}
+        />
+        <Textarea
+          name="description"
+          className="input--description"
+          placeholder="Description..."
+          value={info.description}
           handleInputChange={handleInputChange}
         />
         <Button
