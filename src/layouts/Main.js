@@ -27,6 +27,27 @@ class Main extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleExperienceChange = this.handleExperienceChange.bind(this);
+    this.handleExperienceAdd = this.handleExperienceAdd.bind(this);
+  }
+
+  handleExperienceAdd(event) {
+    event.preventDefault();
+    const experience = [...this.state.form.experience];
+
+    experience.push({
+      company: '',
+      title: '',
+      date: '',
+      location: '',
+      description: '',
+    });
+
+    this.setState({
+      form: {
+        ...this.state.form,
+        experience,
+      },
+    });
   }
 
   handleInputChange(event) {
@@ -44,8 +65,6 @@ class Main extends Component {
     const key = event.target.dataset.name;
     const value = event.target.value;
     const id = parseInt(event.target.parentElement.dataset.id, 10);
-    console.log(this.state);
-    console.log(this.state.form.experience);
     let experience = [...this.state.form.experience];
     let item = { ...experience[id] };
     item[key] = value;
@@ -66,6 +85,7 @@ class Main extends Component {
           info={this.state.form}
           handleInputChange={this.handleInputChange}
           handleExperienceChange={this.handleExperienceChange}
+          handleExperienceAdd={this.handleExperienceAdd}
         />
         <Display />
       </main>

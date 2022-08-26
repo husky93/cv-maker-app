@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './Button';
 import Input from './Input';
 import Textarea from './Textarea';
 
@@ -50,6 +51,7 @@ class ExpForm extends Component {
           value={info.description}
           handleInputChange={handleInputChange}
         />
+        <Button text="Delete" handleClick={() => {}} className="btn--danger" />
       </div>
     );
   }
