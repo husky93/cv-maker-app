@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Input from './Input';
 
 class General extends Component {
   constructor(props) {
@@ -6,7 +7,17 @@ class General extends Component {
   }
 
   render() {
-    return <div className="input-group form-general"></div>;
+    return (
+      <div className="input-group form-general">
+        <Input
+          type="text"
+          className="input--name"
+          placeholder="Name"
+          value="placeholder value"
+          handleInputChange={() => {}}
+        />
+      </div>
+    );
   }
 }
 
