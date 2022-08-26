@@ -16,6 +16,7 @@ class Form extends Component {
       handleExperienceChange,
       handleAddClick,
       handleDeleteClick,
+      handleSkillsInputChange,
     } = this.props;
     return (
       <form className="form" autoComplete="off">
@@ -32,7 +33,12 @@ class Form extends Component {
           handleEducationAdd={handleAddClick}
           handleEducationDelete={handleDeleteClick}
         />
-        <Skills info={info} handleInputChange={handleInputChange} />
+        <Skills
+          info={info}
+          handleInputChange={handleSkillsInputChange}
+          handleSkillDelete={handleDeleteClick}
+          handleSkillAdd={handleAddClick}
+        />
       </form>
     );
   }

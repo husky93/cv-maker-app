@@ -6,9 +6,18 @@ class Input extends Component {
   }
 
   render() {
-    const { className, value, placeholder, type, name, handleInputChange } =
-      this.props;
+    const {
+      className,
+      value,
+      placeholder,
+      type,
+      name,
+      index,
+      handleInputChange,
+    } = this.props;
+
     const classes = `input ${className}`;
+
     return (
       <input
         className={classes}
@@ -17,6 +26,7 @@ class Input extends Component {
         placeholder={placeholder}
         onChange={handleInputChange}
         data-name={name}
+        data-index={index}
       />
     );
   }

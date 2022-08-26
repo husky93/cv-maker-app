@@ -33,9 +33,11 @@ class Main extends Component {
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
           },
         ],
+        skills: ['React', 'Javascript', 'HTML', 'CSS', 'Node.js'],
       },
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSkillsInputChange = this.handleSkillsInputChange.bind(this);
     this.handleExperienceChange = this.handleExperienceChange.bind(this);
     this.handleAddClick = this.handleAddClick.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
@@ -45,6 +47,8 @@ class Main extends Component {
     event.preventDefault();
     const experience = [...this.state.form.experience];
     const education = [...this.state.form.education];
+    const skills = [...this.state.form.skills];
+
     if (event.target.classList.contains('exp-add')) {
       experience.push({
         company: '',
@@ -63,26 +67,35 @@ class Main extends Component {
         description: '',
       });
     }
+    if (event.target.classList.contains('skills-add')) {
+      skills.push('');
+    }
 
     this.setState({
       form: {
         ...this.state.form,
         experience,
         education,
+        skills,
       },
     });
   }
 
   handleDeleteClick(event) {
     event.preventDefault();
-    const id = event.target.parentElement.dataset.id;
+    let id = event.target.parentElement.dataset.id;
     const experience = [...this.state.form.experience];
     const education = [...this.state.form.education];
+    const skills = [...this.state.form.skills];
+
     if (event.target.classList.contains('exp-delete')) {
       experience.splice(id, 1);
     }
     if (event.target.classList.contains('edu-delete')) {
       education.splice(id, 1);
+    }
+    if (event.target.classList.contains('skills-delete')) {
+      skills.splice(id, 1);
     }
 
     this.setState({
@@ -90,6 +103,7 @@ class Main extends Component {
         ...this.state.form,
         experience,
         education,
+        skills,
       },
     });
   }
@@ -101,6 +115,23 @@ class Main extends Component {
       form: {
         ...this.state.form,
         [key]: value,
+      },
+    });
+  }
+
+  handleSkillsInputChange(event) {
+    const value = event.target.value;
+    const index = event.target.dataset.index;
+    const skills = [...this.state.form.skills];
+    let skill = skills[index];
+
+    skill = value;
+    skills[index] = skill;
+
+    this.setState({
+      form: {
+        ...this.state.form,
+        skills,
       },
     });
   }
@@ -131,6 +162,7 @@ class Main extends Component {
           handleExperienceChange={this.handleExperienceChange}
           handleAddClick={this.handleAddClick}
           handleDeleteClick={this.handleDeleteClick}
+          handleSkillsInputChange={this.handleSkillsInputChange}
         />
         <Display />
       </main>
