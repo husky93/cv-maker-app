@@ -12,6 +12,7 @@ class General extends Component {
         <h2 className="group-heading">General Information</h2>
         <Input
           type="text"
+          name="name"
           className="input--name"
           placeholder="Name"
           value="placeholder value"
@@ -19,6 +20,7 @@ class General extends Component {
         />
         <Input
           type="text"
+          name="title"
           className="input--title"
           placeholder="Title"
           value="placeholder value"
@@ -26,6 +28,7 @@ class General extends Component {
         />
         <Input
           type="text"
+          name="location"
           className="input--location"
           placeholder="Location"
           value="placeholder value"
@@ -33,6 +36,7 @@ class General extends Component {
         />
         <Input
           type="tel"
+          name="phone"
           className="input--phone"
           placeholder="Phone number"
           value="placeholder value"
@@ -40,6 +44,7 @@ class General extends Component {
         />
         <Input
           type="email"
+          name="email"
           className="input--email"
           placeholder="E-mail address"
           value="placeholder value"
@@ -47,6 +52,7 @@ class General extends Component {
         />
         <Input
           type="url"
+          name="website"
           className="input--website"
           placeholder="https://example.com"
           value="placeholder value"

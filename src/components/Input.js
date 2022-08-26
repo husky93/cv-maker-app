@@ -6,7 +6,7 @@ class Input extends Component {
   }
 
   render() {
-    const { className, value, placeholder, type, handleInputChange } =
+    const { className, value, placeholder, type, name, handleInputChange } =
       this.props;
     const classes = `input ${className}`;
     return (
@@ -16,6 +16,7 @@ class Input extends Component {
         value={value}
         placeholder={placeholder}
         onChange={handleInputChange}
+        data-name={name}
       />
     );
   }
