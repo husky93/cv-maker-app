@@ -13,9 +13,20 @@ class Main extends Component {
         phone: '1235678995',
         email: 'example@google.com',
         website: 'https://example.com',
+        experience: [
+          {
+            company: 'Example company',
+            title: 'Junior Frontend Developer',
+            date: 'July 2018 - November 2018',
+            location: 'Kraków, PL',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+          },
+        ],
       },
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleExperienceChange = this.handleExperienceChange.bind(this);
   }
 
   handleInputChange(event) {
@@ -29,12 +40,32 @@ class Main extends Component {
     });
   }
 
+  handleExperienceChange(event) {
+    const key = event.target.dataset.name;
+    const value = event.target.value;
+    const id = parseInt(event.target.parentElement.dataset.id, 10);
+    console.log(this.state);
+    console.log(this.state.form.experience);
+    let experience = [...this.state.form.experience];
+    let item = { ...experience[id] };
+    item[key] = value;
+    experience[id] = item;
+
+    this.setState({
+      form: {
+        ...this.state.form,
+        experience,
+      },
+    });
+  }
+
   render() {
     return (
       <main className="main">
         <Form
           info={this.state.form}
           handleInputChange={this.handleInputChange}
+          handleExperienceChange={this.handleExperienceChange}
         />
         <Display />
       </main>
