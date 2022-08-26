@@ -15,6 +15,7 @@ class Form extends Component {
       handleInputChange,
       handleExperienceChange,
       handleExperienceAdd,
+      handleExperienceDelete,
     } = this.props;
     return (
       <form className="form" autoComplete="off">
@@ -23,6 +24,7 @@ class Form extends Component {
           info={info}
           handleInputChange={handleExperienceChange}
           handleExperienceAdd={handleExperienceAdd}
+          handleExperienceDelete={handleExperienceDelete}
         />
         <Education info={info} handleInputChange={handleInputChange} />
         <Skills info={info} handleInputChange={handleInputChange} />

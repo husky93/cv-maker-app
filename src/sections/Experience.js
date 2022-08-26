@@ -8,7 +8,12 @@ class Experience extends Component {
   }
 
   render() {
-    const { info, handleInputChange, handleExperienceAdd } = this.props;
+    const {
+      info,
+      handleInputChange,
+      handleExperienceAdd,
+      handleExperienceDelete,
+    } = this.props;
     return (
       <div className="input-group form-experience">
         <h2 className="group-heading">Experience</h2>
@@ -17,6 +22,7 @@ class Experience extends Component {
             id={index}
             info={item}
             handleInputChange={handleInputChange}
+            handleExperienceDelete={handleExperienceDelete}
             key={`expform-${index}`}
           />
         ))}
