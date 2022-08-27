@@ -10,7 +10,7 @@ class General extends Component {
   render() {
     const { info, handleInputChange } = this.props;
     return (
-      <div className="input-group form-general">
+      <div className="form-general">
         <h2 className="group-heading">General Information</h2>
         <Input
           type="text"

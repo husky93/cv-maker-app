@@ -15,7 +15,7 @@ class Education extends Component {
       handleEducationDelete,
     } = this.props;
     return (
-      <div className="input-group form-education">
+      <div className="form-education">
         <h2 className="group-heading">Education</h2>
         {info.education.map((item, index) => (
           <EduForm

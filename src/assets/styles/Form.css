@@ -41,16 +41,45 @@
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 24px;
   flex: 1 33%;
+}
+
+.form-general, .form-experience, .form-courses, .form-education, .form-skills {
+  min-width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experience-ui {
+  display: flex;
+  flex-direction: column;
 }
 
 .input-group {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 12px;
+}
+
+.form-courses {
+  gap: 24px;
+}
+
+.courses-wrapper {
+  min-width: 75%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.courses-group-container {
+  flex-grow: 1;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
 }
 
 .group-heading {
@@ -69,8 +98,6 @@
   padding: 8px 12px;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 13px;
-  min-width: 75%;
-
 }
 
 .input:focus, .input:active, .textarea:focus, .textarea:active {
@@ -91,8 +118,12 @@
 } 
 
 .skills-group {
-  min-width: 75%;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 24px;
+}
+
+.skills-group input {
+  flex: 1;
 }

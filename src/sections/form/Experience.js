@@ -15,7 +15,7 @@ class Experience extends Component {
       handleExperienceDelete,
     } = this.props;
     return (
-      <div className="input-group form-experience">
+      <div className="form-experience">
         <h2 className="group-heading">Experience</h2>
         {info.experience.map((item, index) => (
           <ExpForm

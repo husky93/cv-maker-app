@@ -12,7 +12,7 @@ class Skills extends Component {
       this.props;
 
     return (
-      <div className="input-group form-skills">
+      <div className="form-skills">
         <h2 className="group-heading">Skills</h2>
         {info.skills.map((value, index) => (
           <div className="skills-group" data-id={index} key={`skills${index}`}>
