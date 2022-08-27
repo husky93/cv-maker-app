@@ -1,5 +1,6 @@
 .main {
   display: flex;
+  align-items: flex-start;
   gap: 36px;
   padding: 36px;
 }

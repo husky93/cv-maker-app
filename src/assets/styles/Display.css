@@ -2,7 +2,8 @@
   background-color: #EDF2F4;
   min-width: 794px;
   width: 794px;
-  height: 1123px;
+  min-height: 1123px;
+  padding-bottom: 48px;
 }
 
 .display-header {
@@ -120,8 +121,10 @@
 }
 
 .courses-container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 24px 0;
 }
 
@@ -136,4 +139,14 @@
   font-style: italic;
   color:#8D99AE;
   font-size:14px;
+}
+
+.experience-group {
+  width: 100%;
+}
+
+.experience-container, .education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }

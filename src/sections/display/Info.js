@@ -13,31 +13,41 @@ class Info extends Component {
       <div className="display-info">
         <div className="display-exp">
           <Heading className="main-heading" tag="h2" text="Experience" />
-          {info.experience.map((item, index) => {
-            return (
-              <div className="experience-group" key={`exp-display-${index}`}>
-                <Heading tag="h3" className="heading--mid" text={item.title} />
-                <Text
-                  tag="strong"
-                  className="text--title"
-                  text={item.company}
-                />
-                <div className="education-info">
-                  <Text tag="span" className="text--cursive" text={item.date} />
+          <div className="experience-container">
+            {info.experience.map((item, index) => {
+              return (
+                <div className="experience-group" key={`exp-display-${index}`}>
+                  <Heading
+                    tag="h3"
+                    className="heading--mid"
+                    text={item.title}
+                  />
                   <Text
-                    tag="span"
-                    className="text--cursive"
-                    text={item.location}
+                    tag="strong"
+                    className="text--title"
+                    text={item.company}
+                  />
+                  <div className="education-info">
+                    <Text
+                      tag="span"
+                      className="text--cursive"
+                      text={item.date}
+                    />
+                    <Text
+                      tag="span"
+                      className="text--cursive"
+                      text={item.location}
+                    />
+                  </div>
+                  <Text
+                    tag="p"
+                    className="text--description"
+                    text={item.description}
                   />
                 </div>
-                <Text
-                  tag="p"
-                  className="text--description"
-                  text={item.description}
-                />
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
         <div className="display-courses">
           <Heading className="main-heading" tag="h2" text="Courses" />
@@ -58,27 +68,41 @@ class Info extends Component {
         </div>
         <div className="display-edu">
           <Heading className="main-heading" tag="h2" text="Education" />
-          {info.education.map((item, index) => {
-            return (
-              <div className="education-group" key={`edu-display-${index}`}>
-                <Heading tag="h3" className="heading--mid" text={item.degree} />
-                <Text tag="strong" className="text--title" text={item.school} />
-                <div className="education-info">
-                  <Text tag="span" className="text--cursive" text={item.date} />
+          <div className="education-container">
+            {info.education.map((item, index) => {
+              return (
+                <div className="education-group" key={`edu-display-${index}`}>
+                  <Heading
+                    tag="h3"
+                    className="heading--mid"
+                    text={item.degree}
+                  />
                   <Text
-                    tag="span"
-                    className="text--cursive"
-                    text={item.location}
+                    tag="strong"
+                    className="text--title"
+                    text={item.school}
+                  />
+                  <div className="education-info">
+                    <Text
+                      tag="span"
+                      className="text--cursive"
+                      text={item.date}
+                    />
+                    <Text
+                      tag="span"
+                      className="text--cursive"
+                      text={item.location}
+                    />
+                  </div>
+                  <Text
+                    tag="p"
+                    className="text--description"
+                    text={item.description}
                   />
                 </div>
-                <Text
-                  tag="p"
-                  className="text--description"
-                  text={item.description}
-                />
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     );
