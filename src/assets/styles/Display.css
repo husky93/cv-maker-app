@@ -26,7 +26,6 @@
 
 .header-bottom-group {
   display: flex;
-  justify-content: space-between;
 }
 
 .icon-group {
@@ -34,6 +33,7 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
+  flex-basis: 50%;
 }
 
 .feather {
@@ -56,4 +56,34 @@
 
 .display-profile {
   font-size: 14px;
+}
+.main-heading {
+  color: #9C0D38;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  border-bottom: 2px #9C0D38 solid;
+  margin: 24px 0;
+}
+
+.display-expertise, .display-exp, .display-courses, .display-edu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 48px;
+}
+
+.expertise-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 8px;
+}
+
+.text--highlighted {
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color:#EDF2F4;
+  background-color: #8D99AE;
 }
