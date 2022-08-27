@@ -39,6 +39,21 @@ class Info extends Component {
             );
           })}
         </div>
+        <div className="display-courses">
+          <Heading className="main-heading" tag="h2" text="Courses" />
+          {info.courses.map((item, index) => {
+            return (
+              <div className="courses-group" key={`courses-display-${index}`}>
+                <Text tag="span" className="text--courses" text={item.name} />
+                <Text
+                  tag="p"
+                  className="courses--description"
+                  text={item.description}
+                />
+              </div>
+            );
+          })}
+        </div>
         <div className="display-edu">
           <Heading className="main-heading" tag="h2" text="Education" />
           {info.education.map((item, index) => {

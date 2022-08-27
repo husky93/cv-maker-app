@@ -42,6 +42,11 @@ class Main extends Component {
             name: 'The Odin Project',
             description: 'Open source free online Web Development course.',
           },
+          {
+            name: 'Web Dev Course',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          },
         ],
         skills: ['React', 'Javascript', 'HTML', 'CSS', 'Node.js'],
       },
