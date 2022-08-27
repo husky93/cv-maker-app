@@ -175,6 +175,11 @@ class Main extends Component {
       item[key] = value;
       education[id] = item;
     }
+    if (event.target.parentElement.classList.contains('courses-group')) {
+      let item = { ...courses[id] };
+      item[key] = value;
+      courses[id] = item;
+    }
 
     this.setState({
       form: {

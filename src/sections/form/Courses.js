@@ -8,33 +8,46 @@ class Courses extends Component {
   }
 
   render() {
-    const { info, handleInputChange, handleSkillAdd, handleSkillDelete } =
-      this.props;
+    const { info, handleInputChange, addCourse, deleteCourse } = this.props;
 
     return (
-      <div className="input-group form-skills">
-        <h2 className="group-heading">Skills</h2>
-        {info.skills.map((value, index) => (
-          <div className="skills-group" data-id={index} key={`skills${index}`}>
+      <div className="input-group form-courses">
+        <h2 className="group-heading">Courses</h2>
+        {info.courses.map((item, index) => (
+          <div
+            className="input-group courses-group"
+            data-id={index}
+            key={`courses${index}`}
+          >
             <Input
               type="text"
-              className="input--skills"
-              placeholder="..."
+              name="name"
+              className="input--name"
+              placeholder="Course name"
               index={index}
-              value={value}
+              value={item.name}
+              handleInputChange={handleInputChange}
+            />
+            <Input
+              type="text"
+              name="description"
+              className="input--description"
+              placeholder="Course description"
+              index={index}
+              value={item.description}
               handleInputChange={handleInputChange}
             />
             <Button
               text="Delete"
-              className="btn--danger skills-delete"
-              handleClick={handleSkillDelete}
+              className="btn--danger courses-delete"
+              handleClick={deleteCourse}
             />
           </div>
         ))}
         <Button
           text="Add"
-          className="btn--primary skills-add"
-          handleClick={handleSkillAdd}
+          className="btn--primary courses-add"
+          handleClick={addCourse}
         />
       </div>
     );

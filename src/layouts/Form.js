@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Courses from '../sections/form/Courses';
 import Education from '../sections/form/Education';
 import Experience from '../sections/form/Experience';
 import General from '../sections/form/General';
@@ -22,6 +23,18 @@ class Form extends Component {
     return (
       <form className="form" autoComplete="off">
         <General info={info} handleInputChange={handleInputChange} />
+        <Skills
+          info={info}
+          handleInputChange={handleSkillsInputChange}
+          handleSkillDelete={handleDeleteClick}
+          handleSkillAdd={handleAddClick}
+        />
+        <Courses
+          info={info}
+          handleInputChange={handleInfoChange}
+          addCourse={handleAddClick}
+          deleteCourse={handleDeleteClick}
+        />
         <Experience
           info={info}
           handleInputChange={handleInfoChange}
@@ -33,12 +46,6 @@ class Form extends Component {
           handleInputChange={handleInfoChange}
           handleEducationAdd={handleAddClick}
           handleEducationDelete={handleDeleteClick}
-        />
-        <Skills
-          info={info}
-          handleInputChange={handleSkillsInputChange}
-          handleSkillDelete={handleDeleteClick}
-          handleSkillAdd={handleAddClick}
         />
       </form>
     );
