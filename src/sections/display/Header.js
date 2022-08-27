@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Heading from '../../components/Heading';
+import Text from '../../components/Text';
 
 class Header extends Component {
   constructor(props) {

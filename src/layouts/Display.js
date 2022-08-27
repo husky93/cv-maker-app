@@ -10,11 +10,12 @@ class Display extends Component {
   }
 
   render() {
+    const { info } = this.props;
     return (
       <div className="display">
-        <Header />
-        <Sidebar />
-        <Info />
+        <Header info={info} />
+        <Sidebar info={info} />
+        <Info info={info} />
       </div>
     );
   }

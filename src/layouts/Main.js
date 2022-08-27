@@ -165,7 +165,7 @@ class Main extends Component {
           handleDeleteClick={this.handleDeleteClick}
           handleSkillsInputChange={this.handleSkillsInputChange}
         />
-        <Display />
+        <Display info={this.state.form} />
       </main>
     );
   }
