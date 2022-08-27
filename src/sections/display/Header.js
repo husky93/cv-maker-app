@@ -8,7 +8,13 @@ class Header extends Component {
   }
 
   render() {
-    return <div className="display-header"></div>;
+    const { info } = this.props;
+    return (
+      <div className="display-header">
+        <Heading tag="h1" className="display-name" text={info.name} />
+        <Text tag="strong" className="display-title" text={info.title} />
+      </div>
+    );
   }
 }
 

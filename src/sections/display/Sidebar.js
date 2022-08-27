@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Heading from '../../components/Heading';
 
 class Sidebar extends Component {
   constructor(props) {
@@ -6,6 +7,7 @@ class Sidebar extends Component {
   }
 
   render() {
+    const { info } = this.props;
     return <div className="display-sidebar"></div>;
   }
 }
