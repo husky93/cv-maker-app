@@ -1,3 +1,43 @@
+
+.btn {
+  padding: 8px 24px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.btn--primary {
+  background-color: #657ED4;
+  border: 3px #5970BA solid;
+}
+
+.btn--primary:hover {
+  background-color: #5970BA ;
+  border: 3px #475994 solid;
+}
+
+.btn--primary:active {
+  background-color: #475994;
+}
+
+.btn--danger {
+  background-color: #FB5012;
+  border: 3px #E04710 solid;
+}
+
+.btn--danger:hover {
+  background-color: #E04710 ;
+  border: 3px #BA3B0D solid;
+}
+
+.btn--danger:active {
+  background-color: #BA3B0D;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -6,7 +46,48 @@
 }
 
 .input-group {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
+}
+
+.group-heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.input, .textarea {
+  border: none;
+  border-radius: 6px;
+  background-color: #7c7c7a;
+  color: #FFFFFF;
+  font-family: inherit;
+  padding: 8px 12px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 14px;
+  min-width: 75%;
+}
+
+.input:focus, .input:active, .textarea:focus, .textarea:active {
+  outline: none;
+  border-bottom: 3px #657ED4 solid;
+} 
+
+.textarea {
+  resize: none;
+  height: 125px;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: #b3b3b3;
+  font-family: inherit;
+} 
+
+.skills-group {
+  min-width: 75%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
