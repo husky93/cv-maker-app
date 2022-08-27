@@ -29,17 +29,17 @@ class Form extends Component {
           handleSkillDelete={handleDeleteClick}
           handleSkillAdd={handleAddClick}
         />
-        <Courses
-          info={info}
-          handleInputChange={handleInfoChange}
-          addCourse={handleAddClick}
-          deleteCourse={handleDeleteClick}
-        />
         <Experience
           info={info}
           handleInputChange={handleInfoChange}
           handleExperienceAdd={handleAddClick}
           handleExperienceDelete={handleDeleteClick}
+        />
+        <Courses
+          info={info}
+          handleInputChange={handleInfoChange}
+          addCourse={handleAddClick}
+          deleteCourse={handleDeleteClick}
         />
         <Education
           info={info}
