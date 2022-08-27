@@ -49,7 +49,7 @@ class Main extends Component {
     const education = [...this.state.form.education];
     const skills = [...this.state.form.skills];
 
-    if (event.target.classList.contains('exp-add')) {
+    if (event.target.classList.contains('exp-add') && experience.length < 3) {
       experience.push({
         company: '',
         title: '',
@@ -58,7 +58,7 @@ class Main extends Component {
         description: '',
       });
     }
-    if (event.target.classList.contains('edu-add')) {
+    if (event.target.classList.contains('edu-add') && education.length < 3) {
       education.push({
         school: '',
         degree: '',
