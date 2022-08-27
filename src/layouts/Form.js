@@ -3,6 +3,7 @@ import Education from '../sections/Education';
 import Experience from '../sections/Experience';
 import General from '../sections/General';
 import Skills from '../sections/Skills';
+import '../styles/Form.css';
 
 class Form extends Component {
   constructor(props) {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Display from './Display';
 import Form from './Form';
+import '../styles/Main.css';
 
 class Main extends Component {
   constructor() {
