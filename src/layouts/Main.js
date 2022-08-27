@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Display from './Display';
 import Form from './Form';
+import PdfDisplay from './PdfDisplay';
 import '../assets/styles/Main.css';
 
 class Main extends Component {
@@ -207,7 +207,7 @@ class Main extends Component {
           handleDeleteClick={this.handleDeleteClick}
           handleSkillsInputChange={this.handleSkillsInputChange}
         />
-        <Display info={this.state.form} />
+        <PdfDisplay info={this.state.form} />
       </main>
     );
   }

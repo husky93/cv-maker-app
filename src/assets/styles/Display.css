@@ -150,3 +150,9 @@
   flex-direction: column;
   gap: 28px;
 }
+
+.pdf-display {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

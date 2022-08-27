@@ -60,18 +60,23 @@
 
 .input, .textarea {
   border: none;
+  border: 3px #5f5f5e solid;
   border-radius: 6px;
   background-color: #7c7c7a;
   color: #FFFFFF;
   font-family: inherit;
+  font-weight: 300;
   padding: 8px 12px;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 14px;
+  font-size: 13px;
   min-width: 75%;
+
 }
 
 .input:focus, .input:active, .textarea:focus, .textarea:active {
   outline: none;
+  font-size: 14px;
+  font-weight: 400;
   border-bottom: 3px #657ED4 solid;
 } 
 
