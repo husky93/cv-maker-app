@@ -1,4 +1,38 @@
 .display {
+  background-color: #EDF2F4;
+  min-width: 794px;
   width: 794px;
   height: 1123px;
+}
+
+.display-header {
+  color:#EDF2F4;
+}
+
+.header-top {
+  padding: 48px;
+  padding-bottom: 24px;
+  background-color: #2B2D42;
+}
+
+.header-bottom {
+  padding: 24px 48px;
+  background-color: #8D99AE;
+}
+
+.display-name {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 32px;
+}
+
+.display-title {
+  color: #ff8c42;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 48px;
+}
+
+.display-profile {
+  font-size: 14px;
 }
