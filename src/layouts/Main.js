@@ -48,7 +48,7 @@ class Main extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSkillsInputChange = this.handleSkillsInputChange.bind(this);
-    this.handleExperienceChange = this.handleExperienceChange.bind(this);
+    this.handleInfoChange = this.handleInfoChange.bind(this);
     this.handleAddClick = this.handleAddClick.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
@@ -156,19 +156,32 @@ class Main extends Component {
     });
   }
 
-  handleExperienceChange(event) {
+  handleInfoChange(event) {
     const key = event.target.dataset.name;
     const value = event.target.value;
     const id = parseInt(event.target.parentElement.dataset.id, 10);
-    let experience = [...this.state.form.experience];
-    let item = { ...experience[id] };
-    item[key] = value;
-    experience[id] = item;
+    console.log(event.target.parentElement);
+    const experience = [...this.state.form.experience];
+    const education = [...this.state.form.education];
+    const courses = [...this.state.form.courses];
+
+    if (event.target.parentElement.classList.contains('form-experience')) {
+      let item = { ...experience[id] };
+      item[key] = value;
+      experience[id] = item;
+    }
+    if (event.target.parentElement.classList.contains('form-education')) {
+      let item = { ...education[id] };
+      item[key] = value;
+      education[id] = item;
+    }
 
     this.setState({
       form: {
         ...this.state.form,
         experience,
+        education,
+        courses,
       },
     });
   }
@@ -179,7 +192,7 @@ class Main extends Component {
         <Form
           info={this.state.form}
           handleInputChange={this.handleInputChange}
-          handleExperienceChange={this.handleExperienceChange}
+          handleInfoChange={this.handleInfoChange}
           handleAddClick={this.handleAddClick}
           handleDeleteClick={this.handleDeleteClick}
           handleSkillsInputChange={this.handleSkillsInputChange}

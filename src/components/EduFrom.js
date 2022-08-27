@@ -11,7 +11,7 @@ class EduForm extends Component {
   render() {
     const { info, id, handleInputChange, handleFormDelete } = this.props;
     return (
-      <div className="input-group form-experience" data-id={id}>
+      <div className="input-group form-education" data-id={id}>
         <Input
           type="text"
           name="school"

@@ -14,7 +14,7 @@ class Form extends Component {
     const {
       info,
       handleInputChange,
-      handleExperienceChange,
+      handleInfoChange,
       handleAddClick,
       handleDeleteClick,
       handleSkillsInputChange,
@@ -24,13 +24,13 @@ class Form extends Component {
         <General info={info} handleInputChange={handleInputChange} />
         <Experience
           info={info}
-          handleInputChange={handleExperienceChange}
+          handleInputChange={handleInfoChange}
           handleExperienceAdd={handleAddClick}
           handleExperienceDelete={handleDeleteClick}
         />
         <Education
           info={info}
-          handleInputChange={handleInputChange}
+          handleInputChange={handleInfoChange}
           handleEducationAdd={handleAddClick}
           handleEducationDelete={handleDeleteClick}
         />
