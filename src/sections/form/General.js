@@ -67,6 +67,14 @@ class General extends Component {
           value={info.website}
           handleInputChange={handleInputChange}
         />
+        <Input
+          type="url"
+          name="github"
+          className="input--github"
+          placeholder="https://github.com"
+          value={info.github}
+          handleInputChange={handleInputChange}
+        />
       </div>
     );
   }

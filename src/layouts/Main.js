@@ -15,6 +15,7 @@ class Main extends Component {
         location: 'Kraków, PL',
         phone: '1235678995',
         email: 'example@google.com',
+        github: 'https://github.com',
         website: 'https://example.com',
         experience: [
           {
