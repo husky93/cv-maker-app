@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from '../../components/Input';
+import Textarea from '../../components/Textarea';
 
 class General extends Component {
   constructor(props) {
@@ -25,6 +26,13 @@ class General extends Component {
           className="input--title"
           placeholder="Title"
           value={info.title}
+          handleInputChange={handleInputChange}
+        />
+        <Textarea
+          name="profile"
+          className="input--profile"
+          placeholder="Profile"
+          value={info.profile}
           handleInputChange={handleInputChange}
         />
         <Input

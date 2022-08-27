@@ -10,6 +10,8 @@ class Main extends Component {
       form: {
         name: 'John Doe',
         title: 'JavaScript Developer',
+        profile:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
         location: 'Kraków, PL',
         phone: '1235678995',
         email: 'example@google.com',

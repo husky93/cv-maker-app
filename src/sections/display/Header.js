@@ -11,8 +11,10 @@ class Header extends Component {
     const { info } = this.props;
     return (
       <div className="display-header">
-        <Heading tag="h1" className="display-name" text={info.name} />
-        <Text tag="strong" className="display-title" text={info.title} />
+        <div className="header-top">
+          <Heading tag="h1" className="display-name" text={info.name} />
+          <Text tag="strong" className="display-title" text={info.title} />
+        </div>
       </div>
     );
   }
