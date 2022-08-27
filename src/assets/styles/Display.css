@@ -2,10 +2,6 @@
   display: grid;
   width: 794px;
   height: 1123px;
-  grid-template-columns: 3fr 8fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 2fr 8fr;
-}
-
-.display-header {
-  grid-column: span 2;
 }

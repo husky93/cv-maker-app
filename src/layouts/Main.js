@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Display from './Display';
 import Form from './Form';
-import '../styles/Main.css';
+import '../assets/styles/Main.css';
 
 class Main extends Component {
   constructor() {
@@ -11,7 +11,7 @@ class Main extends Component {
         name: 'John Doe',
         title: 'JavaScript Developer',
         profile:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
         location: 'Kraków, PL',
         phone: '1235678995',
         email: 'example@google.com',
