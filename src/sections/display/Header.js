@@ -23,21 +23,27 @@ class Header extends Component {
           <Text tag="p" className="display-profile" text={info.profile} />
         </div>
         <div className="header-bottom">
-          <IconGroup text={info.email}>
-            <MailIcon />
-          </IconGroup>
-          <IconGroup text={info.phone}>
-            <PhoneIcon />
-          </IconGroup>
-          <IconGroup text={info.location}>
-            <PinIcon />
-          </IconGroup>
-          <IconGroup text={info.website}>
-            <WebIcon />
-          </IconGroup>
-          <IconGroup text={info.github}>
-            <GithubIcon />
-          </IconGroup>
+          <div className="header-bottom-group">
+            <IconGroup text={info.email}>
+              <MailIcon />
+            </IconGroup>
+            <IconGroup text={info.phone}>
+              <PhoneIcon />
+            </IconGroup>
+          </div>
+          <div className="header-bottom-group">
+            <IconGroup text={info.location}>
+              <PinIcon />
+            </IconGroup>
+            <IconGroup text={info.website}>
+              <WebIcon />
+            </IconGroup>
+          </div>
+          <div className="header-bottom-group">
+            <IconGroup text={info.github}>
+              <GithubIcon />
+            </IconGroup>
+          </div>
         </div>
       </div>
     );

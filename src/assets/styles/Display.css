@@ -18,6 +18,27 @@
 .header-bottom {
   padding: 24px 48px;
   background-color: #8D99AE;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.header-bottom-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.feather {
+  width: 18px;
+  height: 18px;
 }
 
 .display-name {
