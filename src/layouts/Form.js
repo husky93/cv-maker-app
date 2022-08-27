@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Education from '../sections/Education';
-import Experience from '../sections/Experience';
-import General from '../sections/General';
-import Skills from '../sections/Skills';
+import Education from '../sections/form/Education';
+import Experience from '../sections/form/Experience';
+import General from '../sections/form/General';
+import Skills from '../sections/form/Skills';
 import '../styles/Form.css';
 
 class Form extends Component {

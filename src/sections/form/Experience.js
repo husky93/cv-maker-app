@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Button from '../components/Button';
-import ExpForm from '../components/ExpForm';
+import Button from '../../components/Button';
+import ExpForm from '../../components/ExpForm';
 
 class Experience extends Component {
   constructor(props) {

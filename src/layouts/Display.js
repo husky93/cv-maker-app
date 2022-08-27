@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Header from '../sections/display/Header';
+import Sidebar from '../sections/display/Sidebar';
+import Info from '../sections/display/Info';
 import '../styles/Display.css';
 
 class Display extends Component {
@@ -7,7 +10,13 @@ class Display extends Component {
   }
 
   render() {
-    return <div className="display"></div>;
+    return (
+      <div className="display">
+        <Header />
+        <Sidebar />
+        <Info />
+      </div>
+    );
   }
 }
 

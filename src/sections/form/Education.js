@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import EduForm from '../components/EduFrom';
-import Button from '../components/Button';
+import EduForm from '../../components/EduFrom';
+import Button from '../../components/Button';
 
 class Education extends Component {
   constructor(props) {
