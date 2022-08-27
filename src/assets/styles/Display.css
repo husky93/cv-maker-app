@@ -118,3 +118,20 @@
 .text--description {
   font-size: 14px;
 }
+
+.courses-container {
+  display: flex;
+}
+
+.courses-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-basis: 50%;
+}
+
+.courses--description {
+  font-style: italic;
+  color:#8D99AE;
+  font-size:14px;
+}
