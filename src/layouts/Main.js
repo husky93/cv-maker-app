@@ -37,6 +37,12 @@ class Main extends Component {
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
           },
         ],
+        courses: [
+          {
+            name: 'The Odin Project',
+            description: 'Open source free online Web Development course.',
+          },
+        ],
         skills: ['React', 'Javascript', 'HTML', 'CSS', 'Node.js'],
       },
     };
@@ -52,6 +58,7 @@ class Main extends Component {
     const experience = [...this.state.form.experience];
     const education = [...this.state.form.education];
     const skills = [...this.state.form.skills];
+    const courses = [...this.state.form.courses];
 
     if (event.target.classList.contains('exp-add') && experience.length < 3) {
       experience.push({
@@ -74,6 +81,9 @@ class Main extends Component {
     if (event.target.classList.contains('skills-add')) {
       skills.push('');
     }
+    if (event.target.classList.contains('courses-add')) {
+      courses.push({ name: '', description: '' });
+    }
 
     this.setState({
       form: {
@@ -81,6 +91,7 @@ class Main extends Component {
         experience,
         education,
         skills,
+        courses,
       },
     });
   }
@@ -91,6 +102,7 @@ class Main extends Component {
     const experience = [...this.state.form.experience];
     const education = [...this.state.form.education];
     const skills = [...this.state.form.skills];
+    const courses = [...this.state.form.courses];
 
     if (event.target.classList.contains('exp-delete')) {
       experience.splice(id, 1);
@@ -101,6 +113,9 @@ class Main extends Component {
     if (event.target.classList.contains('skills-delete')) {
       skills.splice(id, 1);
     }
+    if (event.target.classList.contains('courses-delete')) {
+      courses.splice(id, 1);
+    }
 
     this.setState({
       form: {
@@ -108,6 +123,7 @@ class Main extends Component {
         experience,
         education,
         skills,
+        courses,
       },
     });
   }

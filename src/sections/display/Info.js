@@ -11,13 +11,17 @@ class Info extends Component {
     const { info } = this.props;
     return (
       <div className="display-info">
-        <div className="display-edu">
-          <Heading className="main-heading" tag="h2" text="Education" />
-          {info.education.map((item, index) => {
+        <div className="display-exp">
+          <Heading className="main-heading" tag="h2" text="Experience" />
+          {info.experience.map((item, index) => {
             return (
-              <div className="education-group" key={`edu-display-${index}`}>
-                <Heading tag="h3" className="heading--mid" text={item.degree} />
-                <Text tag="strong" className="text--title" text={item.school} />
+              <div className="experience-group" key={`exp-display-${index}`}>
+                <Heading tag="h3" className="heading--mid" text={item.title} />
+                <Text
+                  tag="strong"
+                  className="text--title"
+                  text={item.company}
+                />
                 <div className="education-info">
                   <Text tag="span" className="text--cursive" text={item.date} />
                   <Text
@@ -35,17 +39,13 @@ class Info extends Component {
             );
           })}
         </div>
-        <div className="display-exp">
-          <Heading className="main-heading" tag="h2" text="Experience" />
-          {info.experience.map((item, index) => {
+        <div className="display-edu">
+          <Heading className="main-heading" tag="h2" text="Education" />
+          {info.education.map((item, index) => {
             return (
-              <div className="experience-group" key={`exp-display-${index}`}>
-                <Heading tag="h3" className="heading--mid" text={item.title} />
-                <Text
-                  tag="strong"
-                  className="text--title"
-                  text={item.company}
-                />
+              <div className="education-group" key={`edu-display-${index}`}>
+                <Heading tag="h3" className="heading--mid" text={item.degree} />
+                <Text tag="strong" className="text--title" text={item.school} />
                 <div className="education-info">
                   <Text tag="span" className="text--cursive" text={item.date} />
                   <Text
