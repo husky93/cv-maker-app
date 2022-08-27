@@ -63,7 +63,8 @@
   font-size: 20px;
   line-height: 32px;
   border-bottom: 2px #9C0D38 solid;
-  margin: 24px 0;
+  margin: 16px 0;
+  text-transform: uppercase;
 }
 
 .display-expertise, .display-exp, .display-courses, .display-edu {
@@ -71,6 +72,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0 48px;
+  color: #2B2D42;
 }
 
 .expertise-content {
@@ -86,4 +88,33 @@
   font-weight: 400;
   color:#EDF2F4;
   background-color: #8D99AE;
+}
+
+.heading--mid {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.text--title {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.education-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.text--cursive {
+  color:#8D99AE;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.text--description {
+  font-size: 14px;
 }
