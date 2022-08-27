@@ -1,7 +1,4 @@
 .display {
-  display: grid;
   width: 794px;
   height: 1123px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr 8fr;
 }
