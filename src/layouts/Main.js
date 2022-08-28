@@ -165,7 +165,6 @@ class Main extends Component {
     const key = event.target.dataset.name;
     const value = event.target.value;
     const id = parseInt(event.target.parentElement.dataset.id, 10);
-    console.log(event.target.parentElement);
     const experience = [...this.state.form.experience];
     const education = [...this.state.form.education];
     const courses = [...this.state.form.courses];
@@ -180,7 +179,9 @@ class Main extends Component {
       item[key] = value;
       education[id] = item;
     }
-    if (event.target.parentElement.classList.contains('courses-group')) {
+    if (
+      event.target.parentElement.classList.contains('courses-input-wrapper')
+    ) {
       let item = { ...courses[id] };
       item[key] = value;
       courses[id] = item;

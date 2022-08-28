@@ -14,12 +14,11 @@ class Courses extends Component {
       <div className="form-courses">
         <h2 className="group-heading">Courses</h2>
         {info.courses.map((item, index) => (
-          <div
-            className="input-group courses-wrapper"
-            data-id={index}
-            key={`courses${index}`}
-          >
-            <div className="courses-group-container">
+          <div className="input-group courses-wrapper" key={`courses${index}`}>
+            <div
+              className="courses-group-container courses-input-wrapper"
+              data-id={index}
+            >
               <Input
                 type="text"
                 name="name"
