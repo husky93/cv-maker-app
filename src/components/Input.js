@@ -19,15 +19,18 @@ class Input extends Component {
     const classes = `input ${className}`;
 
     return (
-      <input
-        className={classes}
-        type={type}
-        value={value}
-        placeholder={placeholder}
-        onChange={handleInputChange}
-        data-name={name}
-        data-index={index}
-      />
+      <label className="input-wrapper">
+        <input
+          className={classes}
+          type={type}
+          value={value}
+          onChange={handleInputChange}
+          data-name={name}
+          data-index={index}
+          placeholder=" "
+        />
+        <span className="placeholder">{placeholder}</span>
+      </label>
     );
   }
 }

@@ -63,7 +63,7 @@ class General extends Component {
           type="url"
           name="website"
           className="input--website"
-          placeholder="https://example.com"
+          placeholder="Website address"
           value={info.website}
           handleInputChange={handleInputChange}
         />
@@ -71,7 +71,7 @@ class General extends Component {
           type="url"
           name="github"
           className="input--github"
-          placeholder="https://github.com"
+          placeholder="Github"
           value={info.github}
           handleInputChange={handleInputChange}
         />

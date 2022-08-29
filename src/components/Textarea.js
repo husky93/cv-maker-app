@@ -10,13 +10,16 @@ class Textarea extends Component {
       this.props;
     const classes = `textarea ${className}`;
     return (
-      <textarea
-        className={classes}
-        value={value}
-        placeholder={placeholder}
-        onChange={handleInputChange}
-        data-name={name}
-      />
+      <label className="textarea-wrapper">
+        <textarea
+          className={classes}
+          value={value}
+          placeholder=" "
+          onChange={handleInputChange}
+          data-name={name}
+        />
+        <span className="placeholder">{placeholder}</span>
+      </label>
     );
   }
 }

@@ -19,7 +19,7 @@ class Skills extends Component {
             <Input
               type="text"
               className="input--skills"
-              placeholder="..."
+              placeholder="Skill"
               index={index}
               value={value}
               handleInputChange={handleInputChange}

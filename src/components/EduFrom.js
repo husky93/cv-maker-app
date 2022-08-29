@@ -47,7 +47,7 @@ class EduForm extends Component {
         <Textarea
           name="description"
           className="input--description"
-          placeholder="Description..."
+          placeholder="Description"
           value={info.description}
           handleInputChange={handleInputChange}
         />

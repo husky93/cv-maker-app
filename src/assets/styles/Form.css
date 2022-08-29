@@ -50,7 +50,7 @@
   min-width: 75%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
 }
 
 .experience-ui {
@@ -62,7 +62,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 .form-courses {
@@ -73,12 +72,13 @@
   min-width: 75%;
   flex-direction: row;
   align-items: center;
+  gap: 24px;
 }
 
 .courses-group-container {
   flex-grow: 1;
   display: flex;
-  gap: 12px;
+  gap: 24px;
   flex-direction: column;
 }
 
@@ -87,7 +87,26 @@
   font-weight: 600;
 }
 
+.input-wrapper, .textarea-wrapper {
+  position: relative;
+}
+
+.placeholder {
+  position: absolute;
+  pointer-events: none;
+  padding: 14px;
+  top: 0;
+  left: 0;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 13px;
+  opacity: 0.5;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .input, .textarea {
+  width: 100%;
+  min-height: 42px;
   border: none;
   border: 3px #5f5f5e solid;
   border-radius: 6px;
@@ -98,6 +117,13 @@
   padding: 8px 12px;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 13px;
+}
+
+.input:focus + .placeholder, .textarea:focus + .placeholder, .textarea:not(:placeholder-shown) + .placeholder, .input:not(:placeholder-shown) + .placeholder {
+  opacity: 1;
+  transform: translateY(-75%) translateX(-13px);
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .input:focus, .input:active, .textarea:focus, .textarea:active {
@@ -124,6 +150,6 @@
   gap: 24px;
 }
 
-.skills-group input {
+.skills-group .input-wrapper {
   flex: 1;
 }
