@@ -164,24 +164,23 @@ class Main extends Component {
   handleInfoChange(event) {
     const key = event.target.dataset.name;
     const value = event.target.value;
-    const id = parseInt(event.target.parentElement.dataset.id, 10);
+    const formElement = event.target.parentElement.parentElement;
+    const id = parseInt(formElement.dataset.id, 10);
     const experience = [...this.state.form.experience];
     const education = [...this.state.form.education];
     const courses = [...this.state.form.courses];
 
-    if (event.target.parentElement.classList.contains('form-experience')) {
+    if (formElement.classList.contains('form-experience')) {
       let item = { ...experience[id] };
       item[key] = value;
       experience[id] = item;
     }
-    if (event.target.parentElement.classList.contains('form-education')) {
+    if (formElement.classList.contains('form-education')) {
       let item = { ...education[id] };
       item[key] = value;
       education[id] = item;
     }
-    if (
-      event.target.parentElement.classList.contains('courses-input-wrapper')
-    ) {
+    if (formElement.classList.contains('courses-input-wrapper')) {
       let item = { ...courses[id] };
       item[key] = value;
       courses[id] = item;
