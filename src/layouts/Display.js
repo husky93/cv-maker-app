@@ -5,10 +5,6 @@ import Info from '../sections/display/Info';
 import '../assets/styles/Display.css';
 
 class Display extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { info } = this.props;
     return (
