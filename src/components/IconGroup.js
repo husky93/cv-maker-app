@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Text from './Text';
 
-class IconGroup extends Component {
-  constructor(props) {
-    super(props);
-  }
+const IconGroup = (props) => {
+  const { text, children } = props;
 
-  render() {
-    const { text, children } = this.props;
-    return (
-      <div className="icon-group">
-        {children}
-        <Text className="icon-group-text" tag="span" text={text} />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="icon-group">
+      {children}
+      <Text className="icon-group-text" tag="span" text={text} />
+    </div>
+  );
+};
 
 export default IconGroup;

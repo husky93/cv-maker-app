@@ -1,19 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Button extends Component {
-  constructor(props) {
-    super(props);
-  }
+const Button = (props) => {
+  const { text, className, handleClick } = props;
+  const classes = `btn ${className}`;
 
-  render() {
-    const { text, className, handleClick } = this.props;
-    const classes = `btn ${className}`;
-    return (
-      <button className={classes} onClick={handleClick}>
-        {text}
-      </button>
-    );
-  }
-}
+  return (
+    <button className={classes} onClick={handleClick}>
+      {text}
+    </button>
+  );
+};
 
 export default Button;

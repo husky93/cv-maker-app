@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Heading extends Component {
-  constructor(props) {
-    super(props);
-  }
+const Heading = (props) => {
+  const { className, tag, text } = props;
 
-  render() {
-    const { className, tag, text } = this.props;
+  const classes = `heading ${className}`;
+  const CustomTag = tag;
 
-    const classes = `heading ${className}`;
-    const CustomTag = tag;
-
-    return <CustomTag className={classes}>{text}</CustomTag>;
-  }
-}
+  return <CustomTag className={classes}>{text}</CustomTag>;
+};
 
 export default Heading;
