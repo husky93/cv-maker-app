@@ -2,7 +2,7 @@
 
 CV Creator Single Page Application. This project was made with use of [React](https://github.com/facebook/react) JavaScript Library.
 
-**Live: [click here](https://husky93.github.io/cv-maker-app/)**
+### Live: [click here](https://husky93.github.io/cv-maker-app/)
 
 ## Features
 
